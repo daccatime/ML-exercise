@@ -12,9 +12,13 @@ app = Flask(__name__)
 model_path = os.path.join(os.path.pardir,os.path.pardir,'models')
 model_filepath = os.path.join(model_path, 'lr_model.pkl')
 scaler_filepath = os.path.join(model_path, 'lr_scaler.pkl')
+# print(scaler_filepath)
 
-scaler = pickle.load(open(scaler_filepath))
-model = pickle.load(open(model_filepath))
+scaler_open = open(StrToBytes(scaler_filepath))
+scaler = pickle.load(scaler_open)
+
+model_open = open(model_filepath)
+model = pickle.load(model_open)
 
 # columns
 columns = [ u'Age', u'Fare', u'FamilySize', \

@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-import os 
+import os
 
 def read_data():
     # set the path of the raw data

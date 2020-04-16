@@ -10,4 +10,5 @@ def say_hello():
     return "hello {0}".format(name)
 
 if __name__ == '__main__':
+    print('run from main')
     app.run(port=10001, debug=True)
