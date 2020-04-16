@@ -14,10 +14,10 @@ model_filepath = os.path.join(model_path, 'lr_model.pkl')
 scaler_filepath = os.path.join(model_path, 'lr_scaler.pkl')
 # print(scaler_filepath)
 
-scaler_open = open(StrToBytes(scaler_filepath))
+scaler_open = open(scaler_filepath, 'rb')
 scaler = pickle.load(scaler_open)
 
-model_open = open(model_filepath)
+model_open = open(model_filepath, 'rb')
 model = pickle.load(model_open)
 
 # columns
