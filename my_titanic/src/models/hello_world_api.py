@@ -3,7 +3,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route('/api', methods=['POST'])
+@app.route('', methods=['POST'])
 def say_hello():
     data = request.get_json(force=True)
     name = data['name']
